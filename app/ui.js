@@ -2,7 +2,10 @@ const MAPBOX_PUBLIC_TOKEN =
   'pk.eyJ1IjoicGFzdHVkYW4iLCJhIjoiY2pybDR2eWNyMDR0cTN5dDJocTJ0bWltbCJ9.YFUKFpu2vkax0Yi-gcmDyw'
 
 module.exports = function(history) {
-  history = history.map(point => [parseFloat(point[1]), parseFloat(point[0])])
+  history = history.map(point => [
+    parseFloat(parseFloat(point[1]).toFixed(1)),
+    parseFloat(parseFloat(point[0]).toFixed(1))
+  ])
 
   const geoJSON = encodeURIComponent(
     JSON.stringify({

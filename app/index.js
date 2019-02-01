@@ -9,7 +9,8 @@ app.get('/', function(req, res) {
   res.send(ui(history))
 })
 
-const MAX_HISTORY = 1000
+// Much higher than this, and we exceed the URL length limit for the mapbox map
+const MAX_HISTORY = 250
 
 const history = []
 function poll() {
