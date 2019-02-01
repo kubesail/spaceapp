@@ -1,0 +1,14 @@
+{
+  "name": "spaceapp",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon app/index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "redis": "^2.8.0",
+    "request": "^2.88.0"
+  }
+}
