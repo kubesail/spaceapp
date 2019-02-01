@@ -4,11 +4,15 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "start": "nodemon app/index.js"
+    "start": "nodemon app/index.js",
+    "deploy": "npx deploy-node-app"
   },
   "dependencies": {
     "express": "^4.16.4",
     "redis": "^2.8.0",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
   }
 }
