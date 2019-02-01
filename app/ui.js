@@ -37,7 +37,7 @@ module.exports = function(history) {
         <head>
             <meta http-equiv="refresh" content="3">
             <meta charset="UTF-8">
-            <title>Space Station Tracker</title>
+            <title>Space Station Tracker (version 2)</title>
         </head>
 
         <body>
