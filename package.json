@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon app/index.js",
-    "deploy": "npx deploy-node-app"
+    "deploy": "npx deploy-to-kube"
   },
   "dependencies": {
     "express": "^4.16.4",
