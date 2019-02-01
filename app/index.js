@@ -9,7 +9,7 @@ app.get('/', function(req, res) {
   res.send(ui(history))
 })
 
-const MAX_HISTORY = 30
+const MAX_HISTORY = 1000
 
 const history = []
 function poll() {
