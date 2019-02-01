@@ -31,8 +31,6 @@ module.exports = function(history) {
     })
   )
 
-  console.log(history)
-
   return `
     <!DOCTYPE html>
     <html>
