@@ -3,7 +3,7 @@ const server = require('http').Server(app)
 const request = require('request')
 const ui = require('./ui')
 
-server.listen(8000)
+server.listen(3000)
 
 app.get('/', function(req, res) {
   res.send(ui(history))
