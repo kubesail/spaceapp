@@ -37,11 +37,11 @@ module.exports = function(history) {
         <head>
             <meta http-equiv="refresh" content="3">
             <meta charset="UTF-8">
-            <title>Space Station Tracker (version 2)</title>
+            <title>Space Station Tracker</title>
         </head>
 
         <body>
-            <h1>Space Station Tracker</h1>
+            <h1>Space Station Tracker (version 2)</h1>
             <img src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/geojson(${geoJSON})/1,1,1,0,0/1000x500?access_token=${MAPBOX_PUBLIC_TOKEN}">
         </body>
 
