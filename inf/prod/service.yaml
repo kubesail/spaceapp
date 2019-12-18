@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spaceapp
+spec:
+  type: ClusterIP
+  ports:
+    - name: tcp
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app: spaceapp
+    tier: backend
+

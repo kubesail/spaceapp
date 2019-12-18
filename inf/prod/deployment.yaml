@@ -1,0 +1,56 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: spaceapp
+    tier: backend
+    deployedBy: deploy-node-app
+  name: spaceapp
+spec:
+  minReadySeconds: 5
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: spaceapp
+      tier: backend
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: spaceapp
+        tier: backend
+        deployedBy: deploy-node-app
+    spec:
+      containers:
+        - image: 'pastudan/spaceapp:0b08d18'
+          imagePullPolicy: Always
+          name: spaceapp
+          env:
+            - name: GET_HOSTS_FROM
+              value: dns
+          ports:
+            - containerPort: 3000
+              name: http
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 150m
+              memory: 128Mi
+            requests:
+              cpu: 3m
+              memory: 64Mi
+          command:
+            - node
+            - app/index.js
+          envFrom: []
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: spaceapp-regcred
+

@@ -1,5 +1,6 @@
+.git
 node_modules
-build
-public
-misc
-src
+inf
+.env
+docker-compose.yaml
+README.md

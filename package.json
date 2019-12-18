@@ -15,5 +15,17 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
+  },
+  "deploy-node-app": {
+    "prod": {
+      "context": "kubesail-pastudan",
+      "registry": "index.docker.io/v1/",
+      "type": "server",
+      "port": 3000,
+      "protocol": "http",
+      "entrypoint": "app/index.js",
+      "registryUsername": "pastudan",
+      "isPublic": false
+    }
   }
 }
